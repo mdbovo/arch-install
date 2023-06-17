@@ -43,6 +43,7 @@ grub
 efibootmgr
 networkmanager
 git
+nano
 ```
 
 

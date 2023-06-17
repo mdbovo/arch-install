@@ -10,7 +10,7 @@ cfdisk /dev/$INSTALL_DRIVE
 sleep 5
 
 lsblk
-read -p "Enter EFI, swap, and root partition-suffix in order seperated by spaces (eg. p1 p2 p3): " EFI_PARTITION_SUFFIX SWAP_PARTITION_SUFFIX ROOT_PARTITION_SUFFIX 
+read -p "Enter EFI, swap, and root partition-suffix in order seperated by spaces (eg. p1 p2 p3 for nvme or 1 2 3 for sata): " EFI_PARTITION_SUFFIX SWAP_PARTITION_SUFFIX ROOT_PARTITION_SUFFIX 
 
 EFI_PARTITION=$INSTALL_DRIVE$EFI_PARTITION_SUFFIX
 SWAP_PARTITION=$INSTALL_DRIVE$SWAP_PARTITION_SUFFIX
@@ -27,7 +27,7 @@ swapon /dev/$SWAP_PARTITION
 
 reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
-pacstrap /mnt base base-devel linux linux-firmware man-db man-pages texinfo grub efibootmgr networkmanager git
+pacstrap /mnt base base-devel linux linux-firmware man-db man-pages texinfo grub efibootmgr networkmanager git nano
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
