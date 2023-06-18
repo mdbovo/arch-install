@@ -28,3 +28,4 @@ sed -i -e 's/# Defaults targetpw/Defaults targetpw/g' /etc/sudoers
 sed -i -e 's/# ALL ALL=(ALL:ALL) ALL/ALL ALL=(ALL:ALL) ALL/g' /etc/sudoers
 
 systemctl enable NetworkManager.service
+systemctl enable vboxservice.service

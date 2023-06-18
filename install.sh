@@ -25,9 +25,9 @@ mkdir /mnt/efi
 mount /dev/$EFI_PARTITION /mnt/efi
 swapon /dev/$SWAP_PARTITION
 
-reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+reflector --verbose --latest 30 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
-pacstrap /mnt base base-devel linux linux-firmware man-db man-pages texinfo grub efibootmgr networkmanager git nano
+pacstrap /mnt base base-devel linux linux-firmware man-db man-pages texinfo grub efibootmgr networkmanager git nano virtualbox-guest-utils
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
