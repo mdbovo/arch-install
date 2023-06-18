@@ -7,6 +7,8 @@ hwclock --systohc
 sed -i -e 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g' /etc/locale.gen
 locale-gen
 
+sed -i -e 's/#ParallelDownloads/ParallelDownloads/g' /etc/pacman.conf
+
 echo "LANG=en_CA.UTF-8" > /etc/locale.conf
 
 read -p "Enter your hostname: " MY_HOSTNAME
