@@ -24,7 +24,7 @@ Automating the [Arch Linux install process](https://wiki.archlinux.org/index.php
 
 4. [Connect to the internet](https://wiki.archlinux.org/index.php/installation_guide#Connect_to_the_internet)
 
-5. Make shure that guest time is synchronized (timedatectl, /etc/systemd/timesyncd.conf)
+5. Make sure that guest time is synchronized (timedatectl, /etc/systemd/timesyncd.conf)
 
 6. Init pacman key database: ```pacman-key --init```  
 
