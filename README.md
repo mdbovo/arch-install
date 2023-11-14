@@ -22,15 +22,17 @@ Automating the [Arch Linux install process](https://wiki.archlinux.org/index.php
 
 3. [Verify the boot mode](https://wiki.archlinux.org/index.php/installation_guide#Verify_the_boot_mode) if you aren't sure it is UEFI  
 
-4. [Connect to the internet](https://wiki.archlinux.org/index.php/installation_guide#Connect_to_the_internet)  
+4. [Connect to the internet](https://wiki.archlinux.org/index.php/installation_guide#Connect_to_the_internet)
 
-5. Init pacman key database: ```pacman-key --init```  
+5. Make shure that guest time is synchronized (timedatectl, /etc/systemd/timesyncd.conf)
 
-6. Install git: ```pacman -Sy git```  
+6. Init pacman key database: ```pacman-key --init```  
 
-7. Clone this repository into its own directory: ```git clone https://github.com/spfaus/arch-install.git```
+7. Install git: ```pacman -Sy git```  
 
-8. Execute the install script contained in the repository: ```./arch-install/install.sh```
+8. Clone this repository into its own directory: ```git clone https://github.com/spfaus/arch-install.git```
+
+9. Execute the install script contained in the repository: ```./arch-install/install.sh```
 
 ## Installed packages
 ```
